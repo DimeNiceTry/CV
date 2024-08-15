@@ -1,0 +1,116 @@
+*{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    box-sizing: border-box;
+    padding: 0; 
+    margin: 0;
+}
+h1{
+    font-weight: 600;
+}
+h2{
+    font-weight: 500;
+}
+h3{
+    font-weight: 400;
+}
+body{
+    background-color: #D9D9D9;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (hover:hover){
+
+    a:active{
+        color: #000;
+    }
+}
+
+@media (hover:hover){
+    a:hover{
+        color: antiquewhite;
+    }
+    a:active{
+        color: #000;
+    }
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.main{
+    display: flex;
+    height: 700px;
+    border-top: #000 1px solid;
+    padding-top: 20px;
+}
+.userInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    height: 100%;
+    padding-right: 20px;
+    border-right: 1px #000 solid;
+}
+.userInfo-style{
+    background: #C7C5C5;
+    height: 250px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.last{
+    margin: 0;
+}
+
+.userExperience{
+    margin-left: 20px;
+    height: 100%;
+}
+.userExperience-info{
+    background: #C7C5C5;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.edu-years{
+    display: flex;
+    justify-content: space-between;
+}
+.edu-years span {
+    align-content: center;
+}
+.download{
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    border: #000 1px solid;
+}
+.download a{
+    color: #000;
+}
+.download:hover{
+    cursor: pointer;
+}
+.download:active{
+    background: #D9D9D9;
+}
+.userInfo-header{
+    margin-bottom: 5px;
+}
+.userInfo p  {
+    margin-bottom: 5px;
+}
+.userInfo a {
+    display: block;
+    margin-bottom: 5px ;
+}
