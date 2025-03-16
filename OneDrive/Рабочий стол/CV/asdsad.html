@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            box-sizing: border-box;
+            padding: 0; 
+            margin: 0;
+        }
+        h1 { font-weight: 600; }
+        h2 { font-weight: 500; }
+        h3 { font-weight: 400; }
+        body {
+            background-color: #D9D9D9;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        @media (hover:hover) {
+            a:hover { color: antiquewhite; }
+            a:active { color: #000; }
+        }
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .main {
+            display: flex;
+            height: 700px;
+            border-top: #000 1px solid;
+            padding-top: 20px;
+        }
+        .userInfo {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 500px;
+            height: 100%;
+            padding-right: 20px;
+            border-right: 1px #000 solid;
+        }
+        .userInfo-style {
+            background: #C7C5C5;
+            height: 250px;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+        .last { margin: 0; }
+        .userExperience {
+            margin-left: 20px;
+            height: 100%;
+        }
+        .userExperience-info {
+            background: #C7C5C5;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        .edu-years {
+            display: flex;
+            justify-content: space-between;
+        }
+        .edu-years span { align-content: center; }
+        .download {
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin: 0 auto;
+            border: #000 1px solid;
+        }
+        .download a { color: #000; }
+        .download:hover { cursor: pointer; }
+        .download:active { background: #D9D9D9; }
+        .userInfo-header { margin-bottom: 5px; }
+        .userInfo p, .userInfo a { margin-bottom: 5px; }
+        .experience-info-card {
+            background: #D9D9D9;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Чернышов Дмитрий</h1>
+            <h2>Developer/ Analyst</h2>
+        </div>
+        <div class="main">
+            <div class="userInfo">
+                <div class="userInfo-personal userInfo-style">
+                    <h2 class="userInfo-header">Личная информация</h2>
+                    <h3>Адрес</h3>
+                    <p>Россия, г.Москва</p>
+                    <h3>Телефон</h3>
+                    <a href="tel:+79017094575">+7 (901) 709 45 75</a>
+                    <h3>Email</h3>
+                    <a href="mailto:chdd04@gmail.com">chdd04@gmail.com</a>
+                </div>
+                <div class="userInfo-contact userInfo-style">
+                    <h2 class="userInfo-header">Контакты</h2>
+                    <h3>Telegram</h3>
+                    <a target="_blank" href="https://t.me/nice_try_bruh">@nice_try_bruh</a>
+                    <h3>GitHub</h3>
+                    <a target="_blank" href="https://github.com/DimeNiceTry">DimeNiceTry</a>
+                </div>
+                <div class="userInfo-skills userInfo-style">
+                    <h2 class="userInfo-header">Навыки</h2>
+                    <p>Javascript, NodeJS, HTML5, SCSS, React, TypeScript, C#, PostgreSQL</p>
+                </div>
+                <div class="userInfo-languages userInfo-style last">
+                    <h2 class="userInfo-header">Языки</h2>
+                    <p>English - B1<br>Russian - native</p>
+                </div>
+            </div>
+            <div class="userExperience">
+                <div class="userExperience-info">
+                    <h2 class="userInfo-header">Информация</h2>
+                    <p>Я - Frontend разработчик с опытoм работы на стеке NodeJS, C#, PostgreSQL...</p>
+                </div>
+                <div class="userExperience-info">
+                    <h2 class="userInfo-header">Опыт работы</h2>
+                    <div class="experience-info-card">
+                        <h3>Fullstack developer, Future Health Biobank</h3>
+                        <h3 style="color: brown;">Неофициальная занятость!</h3>
+                        <p>Март 2022 - Февраль 2023</p>
+                        <p>Участвовал в разработке сайта...</p>
+                    </div>
+                    <div class="experience-info-card">
+                        <h3>Fullstack developer, ТРАНСНЕФТЬ-ТЕХНОЛОГИИ</h3>
+                        <p>Ноябрь 2024 - Нынешнее время</p>
+                        <p>Учавствовал в разработке и оптимизации внутренних сервисов...</p>
+                    </div>
+                </div>
+                <div class="userExperience-info last">
+                    <div class="edu-years">
+                        <h2 class="userInfo-header">Образование</h2>
+                        <span>2022 - 2026</span>
+                    </div>
+                    <h3>РТУ МИРЭА, бакалавриат</h3>
+                    <p>Специальность: Информационные Системы и Технологии</p>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; align-content: center;">
+            <button class="download"><a href="./Резюме.pdf" download>Скачать pdf</a></button>
+        </div>
+    </div>
+</body>
+</html>
