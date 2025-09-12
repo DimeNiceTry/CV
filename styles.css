@@ -43,7 +43,7 @@ a{
 }
 
 .container{
-    width: 1200px;
+    width: 700px;
     margin: 0 auto;
 }
 .main{
@@ -113,4 +113,180 @@ a{
 .userInfo a {
     display: block;
     margin-bottom: 5px ;
+}
+.experience-info-card{
+    background: #D9D9D9;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+/* Стили для PDF */
+@media print {
+    body {
+        background-color: white !important;
+        margin: 0 !important;
+    }
+    
+    .container {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 10px !important;
+    }
+    
+    .main {
+        height: auto !important;
+        min-height: auto !important;
+    }
+    
+    .userInfo {
+        width: 45% !important;
+        padding-right: 15px !important;
+    }
+    
+    .userExperience {
+        width: 50% !important;
+        margin-left: 15px !important;
+    }
+    
+    .userInfo-style, 
+    .userExperience-info {
+        height: auto !important;
+        min-height: 200px !important;
+        page-break-inside: avoid;
+        margin-bottom: 10px !important;
+    }
+    
+    .download {
+        display: none !important;
+    }
+}
+
+/* Стили для html2pdf */
+.pdf-mode {
+    background-color: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.pdf-mode .container {
+    width: 700px !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    padding: 15px !important;
+    box-sizing: border-box !important;
+    background-color: white !important;
+}
+
+.pdf-mode .header {
+    text-align: center !important;
+    margin-bottom: 15px !important;
+    padding-bottom: 10px !important;
+}
+
+.pdf-mode .main {
+    height: auto !important;
+    min-height: auto !important;
+    display: flex !important;
+    border-top: #000 1px solid !important;
+    padding-top: 15px !important;
+}
+
+.pdf-mode .userInfo {
+    width: 280px !important;
+    padding-right: 12px !important;
+    flex-shrink: 0 !important;
+    border-right: 1px #000 solid !important;
+}
+
+.pdf-mode .userExperience {
+    width: 390px !important;
+    margin-left: 12px !important;
+    flex-shrink: 0 !important;
+}
+
+.pdf-mode .userInfo-style {
+    height: auto !important;
+    min-height: 120px !important;
+    margin-bottom: 8px !important;
+    padding: 8px !important;
+    background: #C7C5C5 !important;
+}
+
+.pdf-mode .userExperience-info {
+    height: auto !important;
+    margin-bottom: 10px !important;
+    padding: 8px !important;
+    background: #C7C5C5 !important;
+}
+
+.pdf-mode .experience-info-card {
+    padding: 6px !important;
+    margin-bottom: 6px !important;
+    background: #D9D9D9 !important;
+}
+
+.pdf-mode .download {
+    display: none !important;
+}
+
+.pdf-mode h1 {
+    font-size: 20px !important;
+    margin-bottom: 4px !important;
+    font-weight: 600 !important;
+}
+
+.pdf-mode h2 {
+    font-size: 14px !important;
+    margin-bottom: 6px !important;
+    font-weight: 500 !important;
+}
+
+.pdf-mode h3 {
+    font-size: 12px !important;
+    margin-bottom: 3px !important;
+    font-weight: 400 !important;
+}
+
+.pdf-mode p {
+    font-size: 10px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 3px !important;
+}
+
+.pdf-mode a {
+    font-size: 10px !important;
+    color: #000 !important;
+}
+
+.pdf-mode .userInfo-header {
+    margin-bottom: 4px !important;
+}
+
+.pdf-mode .userInfo p {
+    margin-bottom: 3px !important;
+}
+
+.pdf-mode .userInfo a {
+    display: block !important;
+    margin-bottom: 3px !important;
+}
+
+.pdf-mode .edu-years {
+    display: flex !important;
+    justify-content: space-between !important;
+    margin-bottom: 3px !important;
+}
+
+.pdf-mode .edu-years span {
+    align-content: center !important;
+    font-size: 10px !important;
+}
+
+.pdf-mode .edu-years h3 {
+    font-size: 11px !important;
+}
+
+.pdf-mode .last {
+    margin: 0 !important;
 }

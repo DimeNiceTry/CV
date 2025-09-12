@@ -9,11 +9,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <div class="header">
             <h1>Чернышов Дмитрий</h1>
-            <h2>Frontend developer</h2>
+            <h2>Developer/ Analyst</h2>
             </div>
         <div class="main">
             <div class="userInfo">
@@ -50,7 +51,7 @@
             <div class="userExperience">
                 <div class="userExperience-info">
                     <h2 class="userInfo-header">Информация</h2>
-                    <p>Я - Frontend разработчик с 1 годом опыта работы на стеке 
+                    <p>Я - Frontend разработчик с опытoм работы на стеке 
                         NodeJS, C#, PostgreSQL. Хорошо адаптируюсь к изменениям в 
                         основном стеке и готов учиться и развиваться в 
                         различных технологиях.</p>
@@ -58,30 +59,87 @@
                 
                 <div class="userExperience-info">
                     <h2 class="userInfo-header">Опыт работы</h2>
-                    <h3>Fullstack developer, Future Health Biobank</h3>
-                    <p>Март 2022 - Февраль 2023</p>
-                    <p>Участвовал в разработке сайта, реализовывал 
-                        оптимизацию индексирования сайта. Была проблема в 
-                        несемантичности сайта, так что приходилось все 
-                        переделывать практически с нуля. Реализовал обработку 
-                        данных клиентов (crm) путём внедрения SQL.</p>
+
+                    <div class="experience-info-card">
+                        <h3>Fullstack developer, Future Health Biobank</h3>
+                        <p>Март 2022 - Февраль 2023</p>
+                        <p>Участвовал в разработке сайта, реализовывал 
+                            оптимизацию индексирования сайта. Была проблема в 
+                            несемантичности сайта, так что приходилось все 
+                            переделывать практически с нуля. Реализовал обработку 
+                            данных клиентов (crm) путём внедрения SQL.</p>
+                    </div>
+                    <div class="experience-info-card">
+                        <h3>Fullstack developer, ТРАНСНЕФТЬ-ТЕХНОЛОГИИ</h3>
+                        <p>Ноябрь 2024 - Нынешнее время</p>
+                        <p >Учавствовал в разработке и оптимизации внутренних сервисов на базе Django REST
+                            Framework, интегрировал и реализовывал функциональность эндпоинтов приложения, оптимизировал различные
+                            скрипты на беке, включая работу с PostgreSQL.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="userExperience-info last">
+                    <h2 class="userInfo-header">Образование</h2>
+                    <div class="edu-years">
+                        <h3>РТУ МИРЭА, бакалавриат</h3>
+                        <span>2022 - 2026</span>    
+                    </div>
+                    <p>Специальность: Информационные Системы и Технологии</p>
+                    <div class="edu-years">
+                        <h3 style="margin-top: 10px;">Samsung Innovation Campus, ДПО</h3>
+                        <span>2023 - 2024</span>    
+                    </div>
+                        <p>Специальность: Мобильная разработка на Kotlin, <a href="">ссылка на диплом </a></p>
+                    <div class="edu-years">
+                        <h3 style="margin-top: 10px;">ITMO AI Talent Hub, ДПО</h3>
+                        <span>2024 - 2025</span>    
+                    </div>
+                        <p>Специальность: ML-Инженерия, <a href="">ссылка на диплом</a></p>
+
+                    
                 </div>
                 <div class="userExperience-info last">
+                    <h2 class="userInfo-header">Внерабочая деятельность</h2>
                     <div class="edu-years">
-                        <h2 class="userInfo-header">Образование</h2>
-                        <span>2022 - 2026</span>
+                        <h3 style="margin-top: 10px;">Samsung Innovation Campus, ДПО</h3>
+                        <span>2023 - 2024</span>    
                     </div>
-                    <h3>РТУ МИРЭА, бакалавриат</h3>
-                    <p>Специальность: Информационные Системы и Технологии</p>
+                        <p>Специальность: Мобильная разработка на Kotlin, <a href="">ссылка на диплом </a></p>
+                    <div class="edu-years">
+                        <h3 style="margin-top: 10px;">ITMO AI Talent Hub, ДПО</h3>
+                        <span>2024 - 2025</span>    
+                    </div>
+                        <p>Специальность: ML-Инженерия, <a href="">ссылка на диплом</a></p>
+
+                    
                 </div>
             </div>
 
         </div>
-        <div style="display: flex; align-content: center;">
-            <button class="download" > <a  href="./Резюме.pdf" download>Скачать pdf</a></button>
-
+        <div style="display: flex; margin-top: 200px;">
+            <button class="download">Скачать pdf</button>
         </div>
     </div>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".download").addEventListener("click", function (e) {
+        e.preventDefault();
+        const element = document.querySelector(".container");
+        const opt = {
+            margin: 0.05,
+            filename: 'Резюме.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 1, useCORS: true },
+            jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+        };
+        html2pdf().from(element).set(opt).save();
+    });
+});
+</script>
 </body>
+
 </html>
