@@ -159,7 +159,7 @@
 
         </div>
         <div class="download-section" style="display: flex; margin-top: 600px;">
-            <button class="download" data-key="download-pdf">Скачать pdf</button>
+            <button class="download download-pdf" data-key="download-pdf">Скачать pdf</button>
         </div>
     </div>
 
@@ -327,6 +327,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".download").addEventListener("click", function (e) {
         e.preventDefault();
         const element = document.querySelector(".container");
+        
+        // Add pdf-mode class to hide specific elements
+        document.body.classList.add('pdf-mode');
+        
         const opt = {
             margin: 0.3,
             filename: currentLanguage === 'en' ? 'Resume.pdf' : 'Резюме.pdf',
@@ -346,7 +350,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 orientation: 'portrait'
             }
         };
-        html2pdf().from(element).set(opt).save();
+        
+        html2pdf().from(element).set(opt).save().then(() => {
+            // Remove pdf-mode class after PDF generation
+            document.body.classList.remove('pdf-mode');
+        });
     });
 
     // Certificate links error handling

@@ -207,6 +207,11 @@ a[download]:hover {
         display: none !important;
     }
     
+    .download-pdf,
+    .lang-label {
+        display: none !important;
+    }
+    
     body {
         background-color: white !important;
         margin: 0 !important;
@@ -255,6 +260,11 @@ a[download]:hover {
 }
 
 .pdf-mode .language-toggle {
+    display: none !important;
+}
+
+.pdf-mode .download-pdf,
+.pdf-mode .lang-label {
     display: none !important;
 }
 
