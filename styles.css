@@ -26,6 +26,19 @@ a{
     color: #fff;
 }
 
+/* Styling for certificate download links */
+a[download] {
+    color: #007acc !important;
+    text-decoration: underline;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+a[download]:hover {
+    color: #005a99 !important;
+    text-decoration: none;
+}
+
 @media (hover:hover){
 
     a:active{
@@ -256,7 +269,13 @@ a{
 
 .pdf-mode a {
     font-size: 10px !important;
-    color: #000 !important;
+    color: #007acc !important;
+    text-decoration: underline !important;
+}
+
+.pdf-mode a[download] {
+    color: #007acc !important;
+    text-decoration: underline !important;
 }
 
 .pdf-mode .userInfo-header {

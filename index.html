@@ -119,12 +119,12 @@
                         <h3 style="margin-top: 10px;">Samsung Innovation Campus, ДПО</h3>
                         <span>2023 - 2024</span>    
                     </div>
-                        <p>Мобильная разработка на Kotlin, <a download href="./сертификат_моб.pdf">ссылка на диплом </a></p>
+                        <p>Мобильная разработка на Kotlin, <a download href="./certificate_mobile.pdf">ссылка на диплом </a></p>
                     <div class="edu-years">
                         <h3 style="margin-top: 10px;">ITMO AI Talent Hub, ДПО</h3>
                         <span>2024 - 2025</span>    
                     </div>
-                        <p>ML-Инженерия, <a download href="./Чернышов Дмитрий Дмитриевич.png">ссылка на диплом</a></p>
+                        <p>ML-Инженерия, <a download href="./certificate_ml.png">ссылка на диплом</a></p>
 
                     
                 </div>
@@ -134,18 +134,18 @@
                         <h3 style="margin-top: 10px;">ОКГ "Столица", ДПО</h3>
                         <span>2022 - 2023</span>    
                     </div>
-                        <p>Консультант в области разработки, <a download href="./документ о квалификации.pdf">ссылка на диплом </a></p>
+                        <p>Консультант в области разработки, <a download href="./certificate_consultation.pdf">ссылка на диплом </a></p>
 
                     <div class="edu-years">
                         <h3 style="margin-top: 10px;">Samsung Innovation Campus, ДПО</h3>
                         <span>2023 - 2024</span>    
                     </div>
-                        <p>Мобильная разработка на Kotlin, <a download href="./сертификат_моб.pdf">ссылка на диплом </a></p>
+                        <p>Мобильная разработка на Kotlin, <a download href="./certificate_mobile.pdf">ссылка на диплом </a></p>
                     <div class="edu-years">
                         <h3 style="margin-top: 10px;">ITMO AI Talent Hub, ДПО</h3>
                         <span>2024 - 2025</span>    
                     </div>
-                        <p>ML-Инженерия, <a download href="./Чернышов Дмитрий Дмитриевич.png">ссылка на диплом</a></p>
+                        <p>ML-Инженерия, <a download href="./certificate_ml.png">ссылка на диплом</a></p>
                 </div>
             </div>
 
@@ -159,6 +159,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+    // PDF generation functionality
     document.querySelector(".download").addEventListener("click", function (e) {
         e.preventDefault();
         const element = document.querySelector(".container");
@@ -182,6 +183,28 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         };
         html2pdf().from(element).set(opt).save();
+    });
+
+    // Certificate links error handling
+    function checkFileExists(url) {
+        return fetch(url, {method: 'HEAD'}).then(res => res.ok);
+    }
+
+    // Add error handling to download links
+    const downloadLinks = document.querySelectorAll('a[download]');
+    downloadLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            checkFileExists(href).then(exists => {
+                if (!exists) {
+                    e.preventDefault();
+                    alert('Файл временно недоступен. Пожалуйста, свяжитесь со мной для получения диплома.');
+                }
+            }).catch(() => {
+                // If fetch fails, let the download proceed
+                console.log('Unable to check file existence, proceeding with download');
+            });
+        });
     });
 });
 </script>
