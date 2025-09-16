@@ -36,23 +36,31 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Чернышов Дмитрий</h1>
-            <h2>Developer/ Analyst</h2>
+            <div class="language-toggle">
+                <span class="lang-label" data-key="lang-ru">RU</span>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="language-toggle" />
+                    <label for="language-toggle" class="switch"></label>
+                </div>
+                <span class="lang-label" data-key="lang-en">EN</span>
+            </div>
+            <h1 data-key="name">Чернышов Дмитрий</h1>
+            <h2 data-key="position">Developer/ Analyst</h2>
             </div>
         <div class="main">
             <div class="userInfo">
                 <div class="userInfo-personal userInfo-style">
-                    <h2 class="userInfo-header">Личная информация</h2>
-                    <h3>Адрес</h3>
-                    <p>Россия, г.Москва</p>
-                    <h3>Телефон</h3>
+                    <h2 class="userInfo-header" data-key="personal-info">Личная информация</h2>
+                    <h3 data-key="address">Адрес</h3>
+                    <p data-key="location">Россия, г.Москва</p>
+                    <h3 data-key="phone">Телефон</h3>
                     <a href="tel:+79017094575">+7 (901) 709 45 75</a>
-                    <h3>Email</h3>
+                    <h3 data-key="email">Email</h3>
                     <a href="mailto:chdd04@gmail.com">chdd04@gmail.com</a>
                 </div>
     
                 <div class="userInfo-contact userInfo-style">
-                    <h2 class="userInfo-header">Контакты</h2>
+                    <h2 class="userInfo-header" data-key="contacts">Контакты</h2>
                     <h3>Telegram</h3>
                     <a target="_blank" href="https://t.me/nice_try_bruh">@nice_try_bruh</a>
                     <h3>GitHub</h3>
@@ -60,48 +68,48 @@
                 </div>
     
                 <div class="userInfo-skills userInfo-style">
-                    <h2 class="userInfo-header">Навыки</h2>
+                    <h2 class="userInfo-header" data-key="skills">Навыки</h2>
                     <p>Python, Django REST Framework, FastAPI, SQL, REST API, JavaScript, React, Git</p>
                 </div>
                 <div class="userInfo-languages userInfo-style last">
-                    <h2 class="userInfo-header">Языки</h2>
-                    <p>English - B1
+                    <h2 class="userInfo-header" data-key="languages">Языки</h2>
+                    <p data-key="language-skills">English - B1
                        Russian - native</p>
                 </div>
             </div>
             <div class="userExperience">
                 <div class="userExperience-info">
-                    <h2 class="userInfo-header">Информация</h2>
-                    <p>Я - Аналитик-разработчик с опытом в создании и оптимизации внутренних сервисов на Django REST Framework и PostgreSQL, улучшении SEO и производительности веб-приложений.</p>
+                    <h2 class="userInfo-header" data-key="info">Информация</h2>
+                    <p data-key="description">Я - Аналитик-разработчик с опытом в создании и оптимизации внутренних сервисов на Django REST Framework и PostgreSQL, улучшении SEO и производительности веб-приложений.</p>
                 </div>
                 
                 <div class="userExperience-info">
-                    <h2 class="userInfo-header">Опыт работы</h2>
+                    <h2 class="userInfo-header" data-key="experience">Опыт работы</h2>
 
                     <div class="experience-info-card">
-                        <h3>Fullstack developer, Future Health Biobank</h3>
-                        <p>Март 2022 - Февраль 2023</p>
-                        <b style="font-weight: 400;">Разработка и поддержка корпоративного сайта</b>
-                        <p style="margin-top: 10px;">Провёл оптимизацию индексирования сайта: внедрил семантическую разметку, 
+                        <h3 data-key="job1-title">Fullstack developer, Future Health Biobank</h3>
+                        <p data-key="job1-date">Март 2022 - Февраль 2023</p>
+                        <b style="font-weight: 400;" data-key="job1-role">Разработка и поддержка корпоративного сайта</b>
+                        <p style="margin-top: 10px;" data-key="job1-desc1">Провёл оптимизацию индексирования сайта: внедрил семантическую разметку, 
                             переработал структуру HTML, что привело к росту трафика на ~35% за первые 3 месяца. 
                             улучшил Lighthouse-показатели (Performance: 92, SEO: 95). </p>
-                        <p style="margin-top: 10px;">Спроектировал SQL-структуру базы и интегрировал её в текущий стек компании</p>
-                        <p style="margin-top: 10px;">Инициировал переход на систему контроля версий Git и наладил базовый CI-процесс</p>
+                        <p style="margin-top: 10px;" data-key="job1-desc2">Спроектировал SQL-структуру базы и интегрировал её в текущий стек компании</p>
+                        <p style="margin-top: 10px;" data-key="job1-desc3">Инициировал переход на систему контроля версий Git и наладил базовый CI-процесс</p>
                     </div>
                     <div class="experience-info-card">
-                        <h3>Fullstack developer, ТРАНСНЕФТЬ-ТЕХНОЛОГИИ</h3>
-                        <p>Ноябрь 2024 - Нынешнее время</p>
-                        <b style="font-weight: 400;">Разработка и оптимизация внутренних сервисов компании</b>
-                        <p style="margin-top: 10px;">
+                        <h3 data-key="job2-title">Fullstack developer, ТРАНСНЕФТЬ-ТЕХНОЛОГИИ</h3>
+                        <p data-key="job2-date">Ноябрь 2024 - Нынешнее время</p>
+                        <b style="font-weight: 400;" data-key="job2-role">Разработка и оптимизация внутренних сервисов компании</b>
+                        <p style="margin-top: 10px;" data-key="job2-desc1">
                             Руководил разработкой и интеграцией ключевых REST API эндпоинтов для внутренних сервисов.
                             Обеспечил коммуникацию между модулями и сократил время отклика системы на ~25%.
         
                         </p>
-                        <p style="margin-top: 10px;">
+                        <p style="margin-top: 10px;" data-key="job2-desc2">
                             переписал SQL-запросы, добавил индексы и внедрил connection pooling, что привело к
                             ускорению критичных операций с PostgreSQL в среднем в 2 раза
                         </p>
-                        <p style="margin-top: 10px;">
+                        <p style="margin-top: 10px;" data-key="job2-desc3">
                             Консультировал команду по вопросам архитектуры и инициировал переход рендера таблиц на серверную пагинацию
                         </p>
                     </div>
@@ -109,63 +117,219 @@
                 </div>
                 
                 <div class="userExperience-info last">
-                    <h2 class="userInfo-header">Образование</h2>
+                    <h2 class="userInfo-header" data-key="education">Образование</h2>
                     <div class="edu-years">
-                        <h3>РТУ МИРЭА, бакалавриат</h3>
-                        <span>2022 - 2026</span>    
+                        <h3 data-key="edu1-title">РТУ МИРЭА, бакалавриат</h3>
+                        <span data-key="edu1-date">2022 - 2026</span>    
                     </div>
-                    <p>Информационные Системы и Технологии</p>
+                    <p data-key="edu1-desc">Информационные Системы и Технологии</p>
                     <div class="edu-years">
-                        <h3 style="margin-top: 10px;">Samsung Innovation Campus, ДПО</h3>
-                        <span>2023 - 2024</span>    
+                        <h3 style="margin-top: 10px;" data-key="edu2-title">Samsung Innovation Campus, ДПО</h3>
+                        <span data-key="edu2-date">2023 - 2024</span>    
                     </div>
-                        <p>Мобильная разработка на Kotlin, <a download href="./certificate_mobile.pdf">ссылка на диплом </a></p>
+                        <p data-key="edu2-desc">Мобильная разработка на Kotlin, <a download href="./certificate_mobile.pdf" data-key="diploma-link">ссылка на диплом </a></p>
                     <div class="edu-years">
-                        <h3 style="margin-top: 10px;">ITMO AI Talent Hub, ДПО</h3>
-                        <span>2024 - 2025</span>    
+                        <h3 style="margin-top: 10px;" data-key="edu3-title">ITMO AI Talent Hub, ДПО</h3>
+                        <span data-key="edu3-date">2024 - 2025</span>    
                     </div>
-                        <p>ML-Инженерия, <a download href="./certificate_ml.png">ссылка на диплом</a></p>
+                        <p data-key="edu3-desc">ML-Инженерия, <a download href="./certificate_ml.png" data-key="diploma-link">ссылка на диплом</a></p>
 
                     
                 </div>
                 <div class="userExperience-info last">
-                    <h2 class="userInfo-header">Внерабочая деятельность</h2>
+                    <h2 class="userInfo-header" data-key="extracurricular">Внерабочая деятельность</h2>
                     <div class="edu-years">
-                        <h3 style="margin-top: 10px;">ОКГ "Столица", ДПО</h3>
-                        <span>2022 - 2023</span>    
+                        <h3 style="margin-top: 10px;" data-key="extra1-title">ОКГ "Столица", ДПО</h3>
+                        <span data-key="extra1-date">2022 - 2023</span>    
                     </div>
-                        <p>Консультант в области разработки, <a download href="./certificate_consultation.pdf">ссылка на диплом </a></p>
+                        <p data-key="extra1-desc">Консультант в области разработки, <a download href="./certificate_consultation.pdf" data-key="diploma-link">ссылка на диплом </a></p>
 
                     <div class="edu-years">
-                        <h3 style="margin-top: 10px;">Samsung Innovation Campus, ДПО</h3>
-                        <span>2023 - 2024</span>    
+                        <h3 style="margin-top: 10px;" data-key="extra2-title">Samsung Innovation Campus, ДПО</h3>
+                        <span data-key="extra2-date">2023 - 2024</span>    
                     </div>
-                        <p>Мобильная разработка на Kotlin, <a download href="./certificate_mobile.pdf">ссылка на диплом </a></p>
+                        <p data-key="extra2-desc">Мобильная разработка на Kotlin, <a download href="./certificate_mobile.pdf" data-key="diploma-link">ссылка на диплом </a></p>
                     <div class="edu-years">
-                        <h3 style="margin-top: 10px;">ITMO AI Talent Hub, ДПО</h3>
-                        <span>2024 - 2025</span>    
+                        <h3 style="margin-top: 10px;" data-key="extra3-title">ITMO AI Talent Hub, ДПО</h3>
+                        <span data-key="extra3-date">2024 - 2025</span>    
                     </div>
-                        <p>ML-Инженерия, <a download href="./certificate_ml.png">ссылка на диплом</a></p>
+                        <p data-key="extra3-desc">ML-Инженерия, <a download href="./certificate_ml.png" data-key="diploma-link">ссылка на диплом</a></p>
                 </div>
             </div>
 
         </div>
         <div class="download-section" style="display: flex; margin-top: 600px;">
-            <button class="download">Скачать pdf</button>
+            <button class="download" data-key="download-pdf">Скачать pdf</button>
         </div>
     </div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
+// Translations object
+const translations = {
+    ru: {
+        'lang-ru': 'RU',
+        'lang-en': 'EN',
+        'name': 'Чернышов Дмитрий',
+        'position': 'Developer/ Analyst',
+        'personal-info': 'Личная информация',
+        'address': 'Адрес',
+        'location': 'Россия, г.Москва',
+        'phone': 'Телефон',
+        'email': 'Email',
+        'contacts': 'Контакты',
+        'skills': 'Навыки',
+        'languages': 'Языки',
+        'language-skills': 'English - B1\nRussian - native',
+        'info': 'Информация',
+        'description': 'Я - Аналитик-разработчик с опытом в создании и оптимизации внутренних сервисов на Django REST Framework и PostgreSQL, улучшении SEO и производительности веб-приложений.',
+        'experience': 'Опыт работы',
+        'job1-title': 'Fullstack developer, Future Health Biobank',
+        'job1-date': 'Март 2022 - Февраль 2023',
+        'job1-role': 'Разработка и поддержка корпоративного сайта',
+        'job1-desc1': 'Провёл оптимизацию индексирования сайта: внедрил семантическую разметку, переработал структуру HTML, что привело к росту трафика на ~35% за первые 3 месяца. улучшил Lighthouse-показатели (Performance: 92, SEO: 95).',
+        'job1-desc2': 'Спроектировал SQL-структуру базы и интегрировал её в текущий стек компании',
+        'job1-desc3': 'Инициировал переход на систему контроля версий Git и наладил базовый CI-процесс',
+        'job2-title': 'Fullstack developer, ТРАНСНЕФТЬ-ТЕХНОЛОГИИ',
+        'job2-date': 'Ноябрь 2024 - Нынешнее время',
+        'job2-role': 'Разработка и оптимизация внутренних сервисов компании',
+        'job2-desc1': 'Руководил разработкой и интеграцией ключевых REST API эндпоинтов для внутренних сервисов. Обеспечил коммуникацию между модулями и сократил время отклика системы на ~25%.',
+        'job2-desc2': 'переписал SQL-запросы, добавил индексы и внедрил connection pooling, что привело к ускорению критичных операций с PostgreSQL в среднем в 2 раза',
+        'job2-desc3': 'Консультировал команду по вопросам архитектуры и инициировал переход рендера таблиц на серверную пагинацию',
+        'education': 'Образование',
+        'edu1-title': 'РТУ МИРЭА, бакалавриат',
+        'edu1-date': '2022 - 2026',
+        'edu1-desc': 'Информационные Системы и Технологии',
+        'edu2-title': 'Samsung Innovation Campus, ДПО',
+        'edu2-date': '2023 - 2024',
+        'edu2-desc': 'Мобильная разработка на Kotlin, ',
+        'edu3-title': 'ITMO AI Talent Hub, ДПО',
+        'edu3-date': '2024 - 2025',
+        'edu3-desc': 'ML-Инженерия, ',
+        'extracurricular': 'Внерабочая деятельность',
+        'extra1-title': 'ОКГ "Столица", ДПО',
+        'extra1-date': '2022 - 2023',
+        'extra1-desc': 'Консультант в области разработки, ',
+        'extra2-title': 'Samsung Innovation Campus, ДПО',
+        'extra2-date': '2023 - 2024',
+        'extra2-desc': 'Мобильная разработка на Kotlin, ',
+        'extra3-title': 'ITMO AI Talent Hub, ДПО',
+        'extra3-date': '2024 - 2025',
+        'extra3-desc': 'ML-Инженерия, ',
+        'diploma-link': 'ссылка на диплом',
+        'download-pdf': 'Скачать pdf'
+    },
+    en: {
+        'lang-ru': 'RU',
+        'lang-en': 'EN',
+        'name': 'Dmitry Chernyshov',
+        'position': 'Developer/ Analyst',
+        'personal-info': 'Personal Information',
+        'address': 'Address',
+        'location': 'Russia, Moscow',
+        'phone': 'Phone',
+        'email': 'Email',
+        'contacts': 'Contacts',
+        'skills': 'Skills',
+        'languages': 'Languages',
+        'language-skills': 'English - B1\nRussian - native',
+        'info': 'About',
+        'description': 'I am an Analyst-Developer with experience in creating and optimizing internal services on Django REST Framework and PostgreSQL, improving SEO and web application performance.',
+        'experience': 'Work Experience',
+        'job1-title': 'Fullstack developer, Future Health Biobank',
+        'job1-date': 'March 2022 - February 2023',
+        'job1-role': 'Development and maintenance of corporate website',
+        'job1-desc1': 'Optimized website indexing: implemented semantic markup, redesigned HTML structure, which led to ~35% traffic growth in the first 3 months. Improved Lighthouse metrics (Performance: 92, SEO: 95).',
+        'job1-desc2': 'Designed SQL database structure and integrated it into the company\'s current stack',
+        'job1-desc3': 'Initiated transition to Git version control system and set up basic CI process',
+        'job2-title': 'Fullstack developer, TRANSNEFT-TECHNOLOGIES',
+        'job2-date': 'November 2024 - Present',
+        'job2-role': 'Development and optimization of internal company services',
+        'job2-desc1': 'Led the development and integration of key REST API endpoints for internal services. Ensured communication between modules and reduced system response time by ~25%.',
+        'job2-desc2': 'Rewrote SQL queries, added indexes and implemented connection pooling, which led to an average 2x acceleration of critical operations with PostgreSQL',
+        'job2-desc3': 'Consulted the team on architecture issues and initiated the transition of table rendering to server-side pagination',
+        'education': 'Education',
+        'edu1-title': 'RTU MIREA, Bachelor\'s degree',
+        'edu1-date': '2022 - 2026',
+        'edu1-desc': 'Information Systems and Technologies',
+        'edu2-title': 'Samsung Innovation Campus, CPE',
+        'edu2-date': '2023 - 2024',
+        'edu2-desc': 'Mobile development in Kotlin, ',
+        'edu3-title': 'ITMO AI Talent Hub, CPE',
+        'edu3-date': '2024 - 2025',
+        'edu3-desc': 'ML Engineering, ',
+        'extracurricular': 'Extracurricular Activities',
+        'extra1-title': 'OKG "Stolitsa", CPE',
+        'extra1-date': '2022 - 2023',
+        'extra1-desc': 'Development Consultant, ',
+        'extra2-title': 'Samsung Innovation Campus, CPE',
+        'extra2-date': '2023 - 2024',
+        'extra2-desc': 'Mobile development in Kotlin, ',
+        'extra3-title': 'ITMO AI Talent Hub, CPE',
+        'extra3-date': '2024 - 2025',
+        'extra3-desc': 'ML Engineering, ',
+        'diploma-link': 'certificate link',
+        'download-pdf': 'Download PDF'
+    }
+};
+
+let currentLanguage = 'ru';
+
+// Function to change language
+function changeLanguage(lang) {
+    currentLanguage = lang;
+    const elements = document.querySelectorAll('[data-key]');
+    
+    elements.forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (translations[lang] && translations[lang][key]) {
+            // Handle special cases for elements with links
+            if (key.includes('-desc') && (key.includes('edu') || key.includes('extra'))) {
+                const linkElement = element.querySelector('a[download]');
+                if (linkElement) {
+                    const linkText = translations[lang]['diploma-link'];
+                    element.innerHTML = translations[lang][key] + `<a download href="${linkElement.href}" data-key="diploma-link">${linkText}</a>`;
+                }
+            } else {
+                element.textContent = translations[lang][key];
+            }
+        }
+    });
+    
+    // Save language preference
+    localStorage.setItem('preferredLanguage', lang);
+    
+    // Update toggle state
+    const toggle = document.getElementById('language-toggle');
+    toggle.checked = (lang === 'en');
+}
+
+// Function to load saved language preference
+function loadLanguagePreference() {
+    const savedLang = localStorage.getItem('preferredLanguage');
+    if (savedLang && translations[savedLang]) {
+        changeLanguage(savedLang);
+    }
+}
 document.addEventListener("DOMContentLoaded", function () {
+    // Load language preference on page load
+    loadLanguagePreference();
+    
+    // Language toggle functionality
+    const languageToggle = document.getElementById('language-toggle');
+    languageToggle.addEventListener('change', function() {
+        const newLang = this.checked ? 'en' : 'ru';
+        changeLanguage(newLang);
+    });
+    
     // PDF generation functionality
     document.querySelector(".download").addEventListener("click", function (e) {
         e.preventDefault();
         const element = document.querySelector(".container");
         const opt = {
             margin: 0.3,
-            filename: 'Резюме.pdf',
+            filename: currentLanguage === 'en' ? 'Resume.pdf' : 'Резюме.pdf',
             image: { type: 'jpeg', quality: 0.98 },
             html2canvas: { 
                 scale: 1.5,

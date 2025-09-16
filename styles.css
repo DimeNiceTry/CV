@@ -21,6 +21,69 @@ body{
     margin-top: 20px;
 }
 
+/* Language toggle styles */
+.language-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.lang-label {
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+}
+
+.toggle-switch input[type="checkbox"] {
+    display: none;
+}
+
+.switch {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.switch:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+input[type="checkbox"]:checked + .switch {
+    background-color: #007acc;
+}
+
+input[type="checkbox"]:checked + .switch:before {
+    transform: translateX(25px);
+}
+
+.switch:hover {
+    background-color: #aaa;
+}
+
+input[type="checkbox"]:checked + .switch:hover {
+    background-color: #005a99;
+}
+
 a{
     text-decoration: none;
     color: #fff;
@@ -58,6 +121,11 @@ a[download]:hover {
 .container{
     width: 700px;
     margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
 }
 .main{
     display: flex;
@@ -135,6 +203,10 @@ a[download]:hover {
 
 /* Стили для PDF */
 @media print {
+    .language-toggle {
+        display: none !important;
+    }
+    
     body {
         background-color: white !important;
         margin: 0 !important;
@@ -180,6 +252,10 @@ a[download]:hover {
     background-color: white !important;
     margin: 0 !important;
     padding: 0 !important;
+}
+
+.pdf-mode .language-toggle {
+    display: none !important;
 }
 
 .pdf-mode .container {
