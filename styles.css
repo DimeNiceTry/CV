@@ -144,9 +144,10 @@ a[download]:hover {
 }
 .userInfo-style{
     background: #C7C5C5;
-    height: 250px;
     margin-bottom: 15px;
     padding: 10px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .last{
