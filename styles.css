@@ -243,7 +243,6 @@ a[download]:hover {
     .userInfo-style, 
     .userExperience-info {
         height: auto !important;
-        min-height: 200px !important;
         page-break-inside: avoid;
         margin-bottom: 10px !important;
     }
@@ -307,7 +306,6 @@ a[download]:hover {
 
 .pdf-mode .userInfo-style {
     height: auto !important;
-    min-height: 120px !important;
     margin-bottom: 8px !important;
     padding: 8px !important;
     background: #C7C5C5 !important;
