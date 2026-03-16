@@ -36,6 +36,7 @@
 <body>
     <div class="container">
         <div class="header">
+            <!--
             <div class="language-toggle">
                 <span class="lang-label" data-key="lang-ru">RU</span>
                 <div class="toggle-switch">
@@ -44,6 +45,7 @@
                 </div>
                 <span class="lang-label" data-key="lang-en">EN</span>
             </div>
+            -->
             <h1 data-key="name">Чернышов Дмитрий</h1>
             <h2 data-key="position">Аналитик-разработчик</h2>
             </div>
@@ -151,9 +153,11 @@
             </div>
 
         </div>
+        <!--
         <div class="download-section" style="display: flex; margin-top: 600px;">
             <button class="download download-pdf" data-key="download-pdf">Скачать pdf</button>
         </div>
+        -->
     </div>
 
 
@@ -310,49 +314,47 @@ function loadLanguagePreference() {
     }
 }
 document.addEventListener("DOMContentLoaded", function () {
-    // Load language preference on page load
-    loadLanguagePreference();
-    
-    // Language toggle functionality
-    const languageToggle = document.getElementById('language-toggle');
-    languageToggle.addEventListener('change', function() {
-        const newLang = this.checked ? 'en' : 'ru';
-        changeLanguage(newLang);
-    });
-    
-    // PDF generation functionality
-    document.querySelector(".download").addEventListener("click", function (e) {
-        e.preventDefault();
-        const element = document.querySelector(".container");
-        
-        // Add pdf-mode class to hide specific elements
-        document.body.classList.add('pdf-mode');
-        
-        const opt = {
-            margin: 0.3,
-            filename: currentLanguage === 'en' ? 'Resume.pdf' : 'Резюме.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { 
-                scale: 1.5,
-                useCORS: true,
-                allowTaint: true,
-                letterRendering: true,
-                logging: false,
-                scrollX: 0,
-                scrollY: 0
-            },
-            jsPDF: { 
-                unit: 'in', 
-                format: 'a4', 
-                orientation: 'portrait'
-            }
-        };
-        
-        html2pdf().from(element).set(opt).save().then(() => {
-            // Remove pdf-mode class after PDF generation
-            document.body.classList.remove('pdf-mode');
-        });
-    });
+    // Language toggle and PDF download are temporarily disabled.
+    // loadLanguagePreference();
+
+    // const languageToggle = document.getElementById('language-toggle');
+    // languageToggle.addEventListener('change', function() {
+    //     const newLang = this.checked ? 'en' : 'ru';
+    //     changeLanguage(newLang);
+    // });
+
+    // document.querySelector(".download").addEventListener("click", function (e) {
+    //     e.preventDefault();
+    //     const element = document.querySelector(".container");
+    //
+    //     // Add pdf-mode class to hide specific elements
+    //     document.body.classList.add('pdf-mode');
+    //
+    //     const opt = {
+    //         margin: 0.3,
+    //         filename: currentLanguage === 'en' ? 'Resume.pdf' : 'Резюме.pdf',
+    //         image: { type: 'jpeg', quality: 0.98 },
+    //         html2canvas: {
+    //             scale: 1.5,
+    //             useCORS: true,
+    //             allowTaint: true,
+    //             letterRendering: true,
+    //             logging: false,
+    //             scrollX: 0,
+    //             scrollY: 0
+    //         },
+    //         jsPDF: {
+    //             unit: 'in',
+    //             format: 'a4',
+    //             orientation: 'portrait'
+    //         }
+    //     };
+    //
+    //     html2pdf().from(element).set(opt).save().then(() => {
+    //         // Remove pdf-mode class after PDF generation
+    //         document.body.classList.remove('pdf-mode');
+    //     });
+    // });
 
     // Certificate links error handling
     function checkFileExists(url) {
